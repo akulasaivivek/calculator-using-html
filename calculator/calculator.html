@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calstyle.css";>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="main">
+       <form name="btn">
+          <input type="text" name="asv" placeholder="0" id="details"> <br>
+          <input type="button" value="1" onclick="btn.asv.value+=1">
+          <input type="button" value="2" onclick="btn.asv.value+=2">
+          <input type="button" value="3" onclick="btn.asv.value+=3">
+          <input type="button" value="+" onclick="add()"><br>
+          <input type="button" value="4" onclick="btn.asv.value+=4">
+          <input type="button" value="5" onclick="btn.asv.value+=5">
+          <input type="button" value="6" onclick="btn.asv.value+=6">
+          <input type="button" value="-" onclick="sub()">
+          <br>
+          <input type="button" value="7" onclick="btn.asv.value+=7">
+          <input type="button" value="8" onclick="btn.asv.value+=8">
+          <input type="button" value="9" onclick="btn.asv.value+=9">
+          <input type="button" value="x" onclick="mul()">
+          <br>
+          <input type="button" value="C" onclick="btn.asv.value=''">
+          <input type="button" value="0" onclick="btn.asv.value+=0">
+          <input type="button" value="=" onclick="btn.asv.value=eval(btn.asv.value)">
+          <input type="button" value="/" onclick="div()">
+          <br>
+
+
+
+
+       </form>
+
+
+
+
+
+    </div>
+    <script>
+        function add(){
+            var num=0,b=0;
+            num=btn.asv.value;
+            b=num.charAt(num.length-1);
+            if(b=='+'|| b=='-' || b=='*' || b=='/'){
+                btn.asv.value=num.substring(0,num.length-1);
+                btn.asv.value+='+';
+            }else{
+                btn.asv.value+='+';
+            }
+
+
+
+        }
+        function sub(){
+            var num=0,b=0;
+            num=btn.asv.value;
+            b=num.charAt(num.length-1);
+            if(b=='+'|| b=='-' || b=='*' || b=='/'){
+                btn.asv.value=num.substring(0,num.length-1);
+                btn.asv.value+='-';
+            }else{
+                btn.asv.value+='-';
+            }
+
+
+
+        }
+        function mul(){
+            var num=0,b=0;
+            num=btn.asv.value;
+            b=num.charAt(num.length-1);
+            if(b=='+'|| b=='-' || b=='*' || b=='/'){
+                btn.asv.value=num.substring(0,num.length-1);
+                btn.asv.value+='*';
+            }else{
+                btn.asv.value+='*';
+            }
+
+
+
+        }
+        function div(){
+            var num=0,b=0;
+            num=btn.asv.value;
+            b=num.charAt(num.length-1);
+            if(b=='+'|| b=='-' || b=='*' || b=='/'){
+                btn.asv.value=num.substring(0,num.length-1);
+                btn.asv.value+='/';
+            }else{
+                btn.asv.value+='/';
+            }
+
+
+
+        }
+        </script>
+    
+</body>
+</html>
